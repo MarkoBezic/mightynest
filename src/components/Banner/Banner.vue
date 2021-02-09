@@ -26,10 +26,11 @@ export default {
     transform: translateX(-51%);
   }
   .discover {
-    max-height: 14%;
+    height: 14%;
     position: absolute;
     left: 50%;
-    transform: translate(-51%, 32%);
+    top: 18%;
+    transform: translate(-51%);
   }
   .tagline {
     font-size: 17px;
@@ -49,18 +50,86 @@ export default {
 
   @media(min-width: 500px) {
     .background {
-    max-height: 65%;
+    max-height: 45%;
     position: absolute;
     left: 50%;
     transform: translateX(-51%);
     }
+    .discover {
+    height: 23%;
+    position: absolute;
+    left: 50%;
+    top: 16%;
+    transform: translate(-51%);
+    }
+     .tagline {
+    font-size: 17px;
+    line-height: 18px;
+    color: #666;
+    width: 230px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-48%);
+    }
+     .join-now-btn {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%);
+    }
+
   }
+  
   @media(min-width: 767px) {
     .background {
-    max-height: 72%;
+    max-height: 68%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    }
+    .discover {
+    height: 27%;
+    position: absolute;
+    left: 50%;
+    top: 18%;
+    transform: translate(-51%);
+    }
+     .tagline {
+    font-size: 30px;
+    line-height: 30px;
+    color: #666;
+    width: 420px;
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-48%);
+    }
+     .join-now-btn {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%);
+    }
+  }
+
+  @media (min-width: 991px) {
+    .background {
+    max-height: 75%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    .discover {
+    height: 32%;
+    left: 50%;
+    top: 20%;
+    }
+    .tagline {
+      top: 50%;
+    }
+    .join-now-btn {
+      top: 68%;
     }
   }
 </style>
