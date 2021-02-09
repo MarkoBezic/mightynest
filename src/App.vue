@@ -1,31 +1,31 @@
 <template>
   <div id="app">
-    <Header />
-    <Sidebar />
+    <Header msg="USPS is seeing delays; orders may be delayed"/>
+    <Banner />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Sidebar from './components/Sidebar.vue'
-
+import Banner from './components/Banner/Banner.vue'
+import Header from './components/Header/Header.vue'
 
 export default {
   name: 'App',
   components: {
-    Sidebar,
     Header,
+    Banner,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;;
+  
 }
 </style>
