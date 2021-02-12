@@ -11,10 +11,11 @@ import {
   faUserSecret,
   faAngleDown,
   faTruck,
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faUserSecret, faAngleDown, faTruck);
+library.add(faUserSecret, faAngleDown, faTruck, faTimes);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
 

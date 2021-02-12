@@ -24,8 +24,6 @@
 
 <script>
 import TogglerIcon from './TogglerIcon.vue'
-// import TogglerIcon from './TogglerIcon.vue'
-
 
 export default {
   components: { TogglerIcon },
@@ -53,7 +51,7 @@ export default {
     transition: .7s;
   }
   .openSidebar {
-    transform: translateX(-3%);
+    transform: translateX(0%);
     transition: .7s;
   }
   
