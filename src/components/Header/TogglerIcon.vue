@@ -35,26 +35,26 @@ rect {
 }
 .top-line {
   transform: rotate(45deg) translate(10px, -22px);
-  transition: .7s;
+  transition: .2s;
 }
 .top-line-closed {
   transform: rotate(0) translate(0,0);
-  transition: .7s;
+  transition: .2s;
 }
 .middle-line {
   opacity: 0;
-  transition: .7s;
+  transition: .2s;
 }
 .middle-line-closed {
   opacity: 1;
-  transition: .7s;
+  transition: .2s;
 }
 .bottom-line {
   transform: rotate(-45deg) translate(-48px, -3px);
-  transition: .7s;
+  transition: .2s;
 }
 .bottom-line-closed {
   transform: rotate(0) translate(0);
-  transition: .7s;
+  transition: .2s;
 }
 </style>

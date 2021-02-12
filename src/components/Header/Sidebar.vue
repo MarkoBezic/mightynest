@@ -48,11 +48,11 @@ export default {
   
   .closedSidebar{
     transform: translateX(-102%);
-    transition: .7s;
+    transition: .3s ease-out;
   }
   .openSidebar {
     transform: translateX(0%);
-    transition: .7s;
+    transition: .3s ease-out;
   }
   
   .sidebar-left {
