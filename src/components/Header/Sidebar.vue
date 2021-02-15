@@ -115,7 +115,6 @@ export default {
     toggleSlide(e){
       e.preventDefault()
       this.isOpen = !this.isOpen;
-      console.log(this.isOpen)
     }
   }
    

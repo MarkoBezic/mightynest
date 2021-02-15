@@ -1,12 +1,15 @@
 <template>
   <div class="header">
-    <div class="shipping-banner">
-      <p class="text-white m-auto p-1 text-center">{{ msg }}</p>
+    <div class="shipping-banner d-md-flex flex-md-row">
+      <p class="text-white text-center d-md-flex p-2 pl-2 my-auto  ">{{ msg }}</p>
+      <p class="d-none d-md-flex text-white ml-auto p-2 px-3 my-auto ">Our Mission</p>
+      <p class="d-none d-md-flex text-white p-2 px-md-4 my-auto ">Blog</p>
     </div>
     <div class="d-flex">
       <sidebar />
       <SearchIcon class="my-2" />
-      <img class="my-2 mx-auto" src="../../images/mnLogo_text.png" alt="MightyNest Logo">
+      <img class="my-2 mx-auto d-md-none" src="../../images/mnLogo_text.png" alt="MightyNest Logo">
+      <img class="my-3 mx-auto d-none d-md-inline" src="../../images/logo.png" alt="MightNest Logo">
       <ShoppingCart class="cart ml-0"/>
     </div>
   </div>
@@ -45,6 +48,13 @@ export default {
   }
   .cart {
     margin-left: auto;
+  }
+
+  
+  @media (min-width: 767px) {
+    .shipping-banner {
+      font-size: 14px;
+    }
   }
 
 </style>
