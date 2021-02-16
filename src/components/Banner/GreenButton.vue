@@ -19,6 +19,10 @@ export default {
     padding: 12px 60px;
     border: #7bbb2c solid 1px;
   }
+  button:hover {
+    background-color:#6ba525
+  }
+ 
 
   @media (min-width: 767px) {
     button {

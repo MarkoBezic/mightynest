@@ -12,18 +12,16 @@ import {
   faAngleDown,
   faTruck,
   faTimes,
+  faAngleUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-import UUID from "vue-uuid";
-
-library.add(faUserSecret, faAngleDown, faTruck, faTimes);
+library.add(faUserSecret, faAngleDown, faTruck, faTimes, faAngleUp);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
-Vue.use(UUID);
 
 Vue.config.productionTip = false;
 
