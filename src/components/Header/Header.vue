@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Sidebar from './Sidebar.vue'
+import Sidebar from './Sidebar/Sidebar.vue'
 import SearchIcon from './SearchIcon'
 import ShoppingCart from './ShoppingCart.vue'
 

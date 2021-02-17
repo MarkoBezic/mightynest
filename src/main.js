@@ -13,10 +13,18 @@ import {
   faTruck,
   faTimes,
   faAngleUp,
+  faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faUserSecret, faAngleDown, faTruck, faTimes, faAngleUp);
+library.add(
+  faUserSecret,
+  faAngleDown,
+  faTruck,
+  faTimes,
+  faAngleUp,
+  faCheckCircle
+);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
 

@@ -27,4 +27,11 @@ export default {
 body {
   font-family: 'Montserrat', sans-serif;
 }
+.mighty-blue {
+  color: #05afc6;
+}
+.mighty-blue:hover {
+  color: #05afc6;
+}
+
 </style>

@@ -18,9 +18,11 @@ export default {
     background-color: #89cf31;
     padding: 12px 60px;
     border: #7bbb2c solid 1px;
+    transition: .4s;
   }
   button:hover {
-    background-color:#6ba525
+    background-color:#6ba525;
+    transition: .4s ease-in-out;
   }
  
 
