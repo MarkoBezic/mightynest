@@ -43,6 +43,7 @@ export default {
     background-color: #89cf31;
     font-size: 11px;
   }
+  
   img {
     height: 40px;
   }

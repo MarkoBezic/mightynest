@@ -34,6 +34,7 @@ export default {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+
   }
   .discover {
     height: 40%;
@@ -104,10 +105,14 @@ export default {
    .banner {
       min-height: 520px;
       max-height: 520px;
+      width: auto;
+      height: auto;
     }
     .background-img {
       min-height: 580px;
-      max-height: 590px;
+      max-height: 700px;
+      width: auto;
+      height: auto;
     }
     .discover {
       max-height: 220px;
