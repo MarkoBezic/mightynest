@@ -372,13 +372,19 @@ export default {
   .sidebar-left {
     z-index: 1;
     position: absolute;
-    margin-top: 10px;
+    top: 88px;
     height: 100%;
     width: 300px;
     overflow: scroll;
   }
   .nav-button, .submenu {
     background-color: white
+  }
+
+  .nav-button {
+    position: fixed;
+    top: 32px;
+    z-index: 2;
   }
 
   .nav-item {
@@ -462,5 +468,11 @@ export default {
   }
   .small-font {
     font-size: 11px;
+  }
+
+  @media(min-width: 767px) {
+    .nav-button {
+      top: 38px;
+    }
   }
 </style>

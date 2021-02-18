@@ -24,6 +24,7 @@ export default {
     max-height: 300px;
     overflow: hidden;
     position: relative;
+    top: 89px;
   }
 
   .background-img {
@@ -114,10 +115,7 @@ export default {
       width: auto;
       height: auto;
     }
-    .discover {
-      max-height: 220px;
-      top: 15%;
-    }
+
     .tagline {
       width: 430px;
       font-size: 30px;
