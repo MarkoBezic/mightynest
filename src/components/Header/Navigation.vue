@@ -1,8 +1,6 @@
-  <template>
+<template>
   <div>
-    <button class="nav-button border-0 mt-1"  @click="toggleSlide"><toggler-icon /></button>
-    <div class="sidebar-left" :class="[!isOpen ? 'closedSidebar' : 'openSidebar']">
-      <div v-for="(nav,index) in navItems" :key="index">
+  <div v-for="(nav,index) in navItems" :key="index">
         <a class="nav-item d-block px-3 py-2"  @click="toggleMenu(index)">
           <font-awesome-icon v-if="nav.freeShipping"  class="truck mr-1 mt-1" icon="truck"></font-awesome-icon>
           {{ nav.heading.toUpperCase() }} 
@@ -207,21 +205,18 @@
             </div>
           </div>
       </div>
-    </div>
   </div>
+
 </template>
 
 <script>
-import GreenButton from '../../Banner/GreenButton.vue'
-import TogglerIcon from '../TogglerIcon.vue'
+import GreenButton from '../Banner/GreenButton'
 
 export default {
-  components: { TogglerIcon, GreenButton },
-  name: 'Sidebar',
-    
+  components: {GreenButton},
+  name: 'Navigation',
   data() {
       return {
-        isOpen: false,
         menuOpen: false,
         navItems: [
           { 
@@ -338,53 +333,21 @@ export default {
             displayContent: false,
 
           },
-          
-          
         ]
-
       }
   },
   methods: {
-    toggleSlide(e){
-      e.preventDefault()
-      this.isOpen = !this.isOpen;
-    },
     toggleMenu(id) {
       this.navItems[id].menuOpen = !this.navItems[id].menuOpen;
       this.navItems[id].displayContent = !this.navItems[id].displayContent;
     }
   }
-   
 }
 </script>
 
 <style scoped>
-  
-  .closedSidebar{
-    transform: translateX(-102%);
-    transition: .3s ease-out;
-  }
-  .openSidebar {
-    transform: translateX(0%);
-    transition: .3s ease-out;
-  }
-  
-  .sidebar-left {
-    z-index: 1;
-    position: absolute;
-    top: 88px;
-    height: 100%;
-    width: 300px;
-    overflow: scroll;
-  }
-  .nav-button, .submenu {
+ .submenu {
     background-color: white
-  }
-
-  .nav-button {
-    position: fixed;
-    top: 32px;
-    z-index: 2;
   }
 
   .nav-item {
@@ -474,5 +437,5 @@ export default {
     .nav-button {
       top: 38px;
     }
-  }
+   }
 </style>

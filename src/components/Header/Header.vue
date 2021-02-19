@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import Sidebar from './Sidebar/Sidebar.vue'
+import Sidebar from './Sidebar.vue'
 import SearchIcon from './SearchIcon'
 import ShoppingCart from './ShoppingCart.vue'
 
@@ -37,13 +37,12 @@ export default {
 </script>
 
 <style scoped>
-  
+
   .header {
     box-shadow: 0 -3px 10px;
     position: fixed;
     width: 100%;
-    z-index: 2;
-    
+    z-index: 3;
   }
 
   .shipping-banner {
@@ -52,7 +51,8 @@ export default {
   }
 
   .main-navbar {
-    background: white;
+    background:white;
+    z-index: 3;
   }
 
   .search-icon {
