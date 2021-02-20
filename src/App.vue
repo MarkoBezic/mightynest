@@ -3,13 +3,17 @@
     <Header msg="USPS is seeing delays; orders may be delayed"/>
     <Banner />
     <Main />
+    <MainJoinMightyFix />
+    <MainOurPledge />
   </div>
 </template>
 
 <script>
 import Banner from './components/Banner/Banner.vue'
 import Header from './components/Header/Header.vue'
-import Main from './components/Main.vue'
+import Main from './components/Main/Main'
+import MainJoinMightyFix from './components/Main/MainJoinMightyFix'
+import MainOurPledge from './components/Main/MainOurPledge'
 
 export default {
   name: 'App',
@@ -17,6 +21,8 @@ export default {
     Header,
     Banner,
     Main,
+    MainJoinMightyFix,
+    MainOurPledge
   }
 }
 </script>
