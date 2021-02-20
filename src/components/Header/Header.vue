@@ -7,9 +7,11 @@
         <p class="d-none d-md-flex text-white p-2 px-md-4 my-auto ">Blog</p>
       </div>
       <div class="main-navbar d-flex">
-        <SearchIcon class="search-icon my-2" />
-        <img class="my-2 mx-auto d-md-none" src="../../images/mnLogo_text.png" alt="MightyNest Logo">
-        <img class="my-3 mx-auto d-none d-md-inline" src="../../images/logo.png" alt="MightNest Logo">
+        <input class="align-self-center ml-3 d-none d-md-block px-1 py-2 t" type="text" placeholder="What are you looking for?">
+        <SearchIcon class="search-icon my-3 ml-md-3 align-self-center" />
+        <a href="#" class="my-2 mx-auto d-md-none"><img  src="../../images/mnLogo_text.png" alt="MightyNest Logo"></a>
+        <a href="#" class="my-3 mx-auto d-none d-md-inline"><img class="logo-md" src="../../images/logo.png" alt="MightNest Logo"></a>
+        <a href="#" class="sign-up-link mx-4 pl-5 align-self-center d-none d-md-block">Sign in/Sign up</a>
         <ShoppingCart class="cart ml-0"/>
       </div>
     </div>
@@ -70,6 +72,28 @@ export default {
   @media (min-width: 767px) {
     .shipping-banner {
       font-size: 14px;
+    }
+    input {
+      font-size: 11px;
+      width: 160px;
+      border: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    .logo-md{
+      transform: scale(1.2);
+    }
+
+    .search-icon {
+      fill: #e4e4e4;
+   }
+    .sign-up-link {
+      font-size: 12px;
+      color: #666;
     }
   }
 

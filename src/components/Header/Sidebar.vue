@@ -1,6 +1,6 @@
   <template>
   <div>
-    <button class="nav-button border-0 mt-1"  @click="toggleSlide"><toggler-icon /></button>
+    <button class="nav-button border-0 mt-1 d-md-none"  @click="toggleSlide"><toggler-icon /></button>
     <div class="sidebar-left" :class="[!isOpen ? 'closedSidebar' : 'openSidebar']">
       <Navigation />
     </div>
