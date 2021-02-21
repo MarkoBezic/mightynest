@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Navigation from './Navigation'
+import Navigation from './Navigation/index'
 import TogglerIcon from './TogglerIcon'
 
 export default {
@@ -29,8 +29,6 @@ export default {
 </script>
 
 <style scoped>
-   
-  
   .closedSidebar{
     transform: translateX(-102%);
     transition: .3s ease-out;
@@ -43,8 +41,8 @@ export default {
   .sidebar-left {
     background: white;
     z-index: 3;
-    position: absolute;
-    top: 88px;
+    position: fixed;
+    top: 92px;
     height: 100%;
     width: 300px;
     overflow: scroll;
@@ -53,7 +51,7 @@ export default {
   .nav-button {
     position: fixed;
     background-color: white;
-    top: 32px;
+    top: 40px;
     z-index: 3;
   }
 
