@@ -1,9 +1,9 @@
 <template>
   <div>
-  <div v-for="(nav,index) in navItems" :key="index">
+    <div class="nav-item-container" v-for="(nav,index) in navItems" :key="index">
         <a class="nav-item d-block px-3 py-2"  @click="toggleMenu(index)">
           <font-awesome-icon v-if="nav.freeShipping"  class="truck mr-1 mt-1" icon="truck"></font-awesome-icon>
-          {{ nav.heading.toUpperCase() }} 
+          {{ nav.freeShipping ? nav.heading : nav.heading.toUpperCase() }} 
           <font-awesome-icon v-if="nav.submenu" class="float-right mt-1" :class="!nav.menuOpen ? 'angle-down' : 'angle-up'" :icon="!nav.menuOpen ? 'angle-down' : 'angle-up'"></font-awesome-icon>
         </a>
         <div :class="nav.displayContent ? '' : 'd-none'">
@@ -40,7 +40,6 @@
           </div>
       </div>
   </div>
-
 </template>
 
 <script>
@@ -92,7 +91,6 @@ export default {
             submenu: false,
             menuOpen: false,
             displayContent: false,
-
           },
           { 
             heading: 'New',
@@ -200,12 +198,7 @@ export default {
 </script>
 
 <style>
- .submenu {
-    background-color: white
-  }
-  .submenu-list li {
-    padding: 5px 0;
-  }
+ 
   .nav-item {
     text-decoration: none;
     font-weight: bold;
@@ -214,18 +207,30 @@ export default {
     border: 1px solid #f1f1f1;
     background: white;
   }
+
+  .nav-item:hover {
+    text-decoration: none;
+  }
+
   .nav-item:hover {
     cursor: pointer;
     color: #333;
   }
 
-   a:nth-child(14) {
+  .nav-item-container:nth-child(14) > a  {
     text-decoration: none;
     font-weight: 200 !important;
     font-size: 12px !important;
     color: #666;
     padding-top: 15px !important;
     padding-bottom: 2px !important;
+  }
+
+  .submenu {
+    background-color: white
+  }
+  .submenu-list li {
+    padding: 5px 0;
   }
 
   .angle-down, .angle-up {
