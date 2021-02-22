@@ -6,7 +6,7 @@
         {{ nav.freeShipping ? nav.heading : nav.heading.toUpperCase() }} 
         <font-awesome-icon v-if="nav.submenu" class="float-right mt-1" :class="!nav.menuOpen ? 'angle-down' : 'angle-up'" :icon="!nav.menuOpen ? 'angle-down' : 'angle-up'"></font-awesome-icon>
       </a>
-      <div :class="nav.displayContent ? '' : 'd-none'">
+      <div class="d-md-none" :class="nav.displayContent ? '' : 'd-none'">
         <div class="submenu px-3" v-if="nav.menuOpen && nav.heading == 'Subscribe'">
           <nav-submenu-subscribe />
         </div>

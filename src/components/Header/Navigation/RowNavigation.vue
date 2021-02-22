@@ -1,11 +1,15 @@
 <template>
   <div class="row-navigation d-md-flex justify-content-center">
     <div class="row-nav-item-container" v-for="(nav,index) in navItems" :key="index">
-      <a class="row-nav-item d-block px-1 pt-1 pb-2 mx-1 mt-1 mb-1 text-decoration-none"  @click="toggleMenu(index)">
+      <a class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none"  @mouseover="toggleMenu(index)" @mouseleave="toggleMenu(index)">
         <font-awesome-icon v-if="nav.freeShipping"  class="truck mr-1 mt-1 d-md-none" icon="truck"></font-awesome-icon>
         {{ nav.heading }} 
         <font-awesome-icon v-if="nav.submenu" class="float-right mt-1 d-md-none" :class="!nav.menuOpen ? 'angle-down' : 'angle-up'" :icon="!nav.menuOpen ? 'angle-down' : 'angle-up'"></font-awesome-icon>
       </a>
+      
+    </div>
+
+    <div v-for="(nav, index) in navItems" :key="index" class="position-absolute submenu-container">
       <div :class="nav.displayContent ? '' : 'd-none'">
         <div class="submenu px-3" v-if="nav.menuOpen && nav.heading == 'Subscribe'">
           <nav-submenu-subscribe />
@@ -38,7 +42,9 @@
           <nav-submenu-sale />
         </div>
       </div>
+      
     </div>
+
   </div>
 </template>
 
@@ -210,15 +216,19 @@ export default {
 
 .row-navigation a {
   cursor: pointer;
-  color: #666;
+  color: #777;
 }
 
-.row-navigation div{
-  border-bottom: 4px solid white;
-} 
+.row-navigation a:hover {
+  font-weight: bold;
+}
 
-.row-navigation div:hover {
-  border-bottom: 4px solid #05afc6;
+.row-navigation a:hover {
+  border-bottom: 3px solid #05afc6;
+}
+
+.row-nav-item {
+  border-bottom: 3px solid white;
 }
 
 .row-nav-item-container:nth-child(1),
@@ -235,9 +245,26 @@ export default {
   font-weight: bolder;
 }
 
+.row-nav-item-container:nth-child(3) {
+  border-right: 1px solid navy;
+  padding-right: 7px;
+  height: 25px;
+}
+
+.row-nav-item-container:nth-child(4) {
+  padding-left: 7px;
+}
+
+
 .row-nav-item-container:nth-child(5) a {
   font-weight: bolder;
   color: red;
+}
+
+.submenu-container {
+  border-top: 1px solid lightgray;
+  top: 157px;
+  width: 100%;
 }
 
 }
