@@ -9,11 +9,12 @@
       <div class="main-navbar d-flex">
         <input class="align-self-center ml-3 d-none d-md-block px-1 py-2 t" type="text" placeholder="What are you looking for?">
         <SearchIcon class="search-icon my-3 ml-md-3 align-self-center" />
-        <a href="#" class="my-2 mx-auto d-md-none"><img  src="../../images/mnLogo_text.png" alt="MightyNest Logo"></a>
+        <a href="#" class="my-2 mx-auto d-md-none"><img class="logo-sm" src="../../images/mnLogo_text.png" alt="MightyNest Logo"></a>
         <a href="#" class="my-3 mx-auto d-none d-md-inline"><img class="logo-md" src="../../images/logo.png" alt="MightNest Logo"></a>
         <a href="#" class="sign-up-link mx-4 pl-5 align-self-center d-none d-md-block">Sign in/Sign up</a>
-        <ShoppingCart class="cart ml-0"/>
+        <ShoppingCart class="cart ml-0 my-auto"/>
       </div>
+      <row-navigation />
     </div>
     <sidebar />
   </div>
@@ -23,12 +24,14 @@
 import Sidebar from './Sidebar.vue'
 import SearchIcon from './SearchIcon'
 import ShoppingCart from './ShoppingCart.vue'
+import RowNavigation from './Navigation/RowNavigation.vue'
 
 export default {
   components: { 
     Sidebar,
     SearchIcon,
-    ShoppingCart
+    ShoppingCart,
+    RowNavigation,
     },
   name: 'Header',
   props: {
@@ -61,9 +64,14 @@ export default {
     margin-left: 55px;
   }
   
-  img {
+  .logo-sm {
     height: 40px;
   }
+
+  .logo-md {
+    height: 47px;
+  }
+
   .cart {
     margin-left: auto;
   }
@@ -84,10 +92,10 @@ export default {
       outline: none;
     }
 
-    .logo-md{
-      transform: scale(1.2);
+    input::placeholder {
+      color: #ababab;
     }
-
+    
     .search-icon {
       fill: #e4e4e4;
    }

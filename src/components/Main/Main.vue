@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
 .main {
-  margin-top: 105px;
+  margin-top: 100px;
   max-width: 700px;
 }
 h6 {
@@ -63,6 +63,11 @@ p {
 }
 .dotted-border {
   border: 1px dashed lightgray;
+}
+@media (min-width: 767px) {
+  .main {
+  margin-top: 185px;
+  }
 }
 
 </style>

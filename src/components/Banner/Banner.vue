@@ -78,6 +78,7 @@ export default {
 
   @media (min-width: 767px) {
     .banner {
+      top: 158px;
       min-height: 440px;
       max-height: 440px;
     }

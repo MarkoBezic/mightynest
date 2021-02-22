@@ -1,10 +1,10 @@
 <template>
-  <div class="nav-container"> 
-    <div class="nav-item-container" v-for="(nav,index) in navItems" :key="index">
-      <a class="nav-item d-block px-3 py-2"  @click="toggleMenu(index)">
-        <font-awesome-icon v-if="nav.freeShipping"  class="truck mr-1 mt-1" icon="truck"></font-awesome-icon>
-        {{ nav.freeShipping ? nav.heading : nav.heading.toUpperCase() }} 
-        <font-awesome-icon v-if="nav.submenu" class="float-right mt-1" :class="!nav.menuOpen ? 'angle-down' : 'angle-up'" :icon="!nav.menuOpen ? 'angle-down' : 'angle-up'"></font-awesome-icon>
+  <div class="row-navigation d-md-flex justify-content-center">
+    <div class="row-nav-item-container" v-for="(nav,index) in navItems" :key="index">
+      <a class="row-nav-item d-block px-1 pt-1 pb-2 mx-1 mt-1 mb-1 text-decoration-none"  @click="toggleMenu(index)">
+        <font-awesome-icon v-if="nav.freeShipping"  class="truck mr-1 mt-1 d-md-none" icon="truck"></font-awesome-icon>
+        {{ nav.heading }} 
+        <font-awesome-icon v-if="nav.submenu" class="float-right mt-1 d-md-none" :class="!nav.menuOpen ? 'angle-down' : 'angle-up'" :icon="!nav.menuOpen ? 'angle-down' : 'angle-up'"></font-awesome-icon>
       </a>
       <div :class="nav.displayContent ? '' : 'd-none'">
         <div class="submenu px-3" v-if="nav.menuOpen && nav.heading == 'Subscribe'">
@@ -67,7 +67,7 @@ export default {
     NavSubmenuPets,
     NavSubmenuSale,
   },
-  name: 'Navigation',
+  name: 'RowNavigation',
   data() {
       return {
         menuOpen: false,
@@ -197,74 +197,48 @@ export default {
 }
 </script>
 
-<style>
- 
-  .nav-item {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    color: #777;
-    border: 1px solid #f1f1f1;
-    background: white;
-  }
+<style scoped>
+.row-navigation {
+  display: none;
+}
 
-  .nav-item:hover {
-    text-decoration: none;
-  }
+@media (min-width: 767px) {
+.row-navigation {
+  background: white;
+  font-size: 12px;
+ }
 
-  .nav-item:hover {
-    cursor: pointer;
-    color: #333;
-  }
+.row-navigation a {
+  cursor: pointer;
+  color: #666;
+}
 
-  .nav-item-container:nth-child(14) > a  {
-    text-decoration: none;
-    font-weight: 400 !important;
-    font-size: 12px !important;
-    color: #777;
-    padding-top: 15px !important;
-    padding-bottom: 2px !important;
-  }
+.row-navigation div{
+  border-bottom: 4px solid white;
+} 
 
-  .submenu {
-    background-color: white
-  }
-  .submenu-list li {
-    padding: 5px 0;
-  }
+.row-navigation div:hover {
+  border-bottom: 4px solid #05afc6;
+}
 
-  .angle-down, .angle-up {
-    color: rgb(189, 189, 189);
-    transform: scale(1.4);
-  }
-  .truck {
-    transform: scale(.8);
-  }
+.row-nav-item-container:nth-child(1),
+.row-nav-item-container:nth-child(14),
+.row-nav-item-container:nth-child(15),
+.row-nav-item-container:nth-child(16)
+{
+  display: none;
+}
+.row-nav-item-container:nth-child(2) a,
+.row-nav-item-container:nth-child(3) a
+{
+  color: #05afc6;
+  font-weight: bolder;
+}
 
-  ul {
-  list-style: none;
-  }
+.row-nav-item-container:nth-child(5) a {
+  font-weight: bolder;
+  color: red;
+}
 
-  li {
-    border-bottom: 1px solid rgba(236, 235, 235, 0.692);
-    padding: 2px;
-  }
-
-  p, li {
-    font-size: 14px;
-  }
-  
-  .featured-items li {
-    border: none
-  }
-  .small-font {
-    font-size: 11px;
-  }
-
-  @media(min-width: 767px) {
-      .nav-button {
-      top: 38px;
-    }
-    
-   }
+}
 </style>
