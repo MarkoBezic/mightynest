@@ -128,6 +128,10 @@ export default {
       transform: scale(2.1);
     }
 
+    .column-3 {
+      border-left: 1px solid #05afc6;
+    }
+
     .bottom-row {
       grid-column: 1/4;
     }

@@ -246,7 +246,7 @@ export default {
   }
 
   li {
-    border-bottom: 1px solid rgba(236, 235, 235, 0.692);
+    border-bottom: 1px solid #ecebebb0;
     padding: 2px;
   }
 
