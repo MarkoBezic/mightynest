@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   @media (min-width: 767px) {
 
     .kitchen {
@@ -61,7 +61,7 @@ export default {
       font-size: 14px !important;
     }
     .featured-items > p > a {
-      color: #444 !important;
+      color: #555 !important;
     }
     .sub-heading {
       text-transform: uppercase !important;

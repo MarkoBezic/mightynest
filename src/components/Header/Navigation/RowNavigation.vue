@@ -103,7 +103,6 @@ export default {
             submenu: false,
             menuOpen: false,
             displayContent: false,
-
           },
           { 
             heading: 'Gifts',
@@ -111,63 +110,54 @@ export default {
             menuOpen: false,
             displayContent: false,
             content: 'Gifts Dropdown'           
-
           },
           { 
             heading: 'Kitchen',
             submenu: true,
             menuOpen: false,
             displayContent: false,
-
           },
           { 
             heading: 'On the go',
             submenu: true,
             menuOpen: false,
             displayContent: false,
-
           },
           { 
             heading: 'Cleaning',
             submenu: true,
             menuOpen: false,
             displayContent: false,
-
           },
           { 
             heading: 'Body',
             submenu: true,
             menuOpen: false,
             displayContent: false,
-
           },
           { 
             heading: 'Wellness',
             submenu: true,
             menuOpen: false,
             displayContent: false,
-
           },
           { 
             heading: 'Kids',
             submenu: true,
             menuOpen: false,
             displayContent: false,
-
           },
           { 
             heading: 'Pets',
             submenu: true,
             menuOpen: false,
             displayContent: false,
-
           },
           { 
             heading: 'Sale',
             submenu: true,
             menuOpen: false,
             displayContent: false,
-
           },
           { 
             heading: 'Free Shipping over $50',
@@ -175,21 +165,18 @@ export default {
             submenu: false,
             menuOpen: false,
             displayContent: false,
-
           },
           { 
             heading: 'MIGHTYLIFE BLOG',
             submenu: false,
             menuOpen: false,
             displayContent: false,
-
           },
           { 
             heading: 'LOG-IN',
             submenu: false,
             menuOpen: false,
             displayContent: false,
-
           },
         ]
       }
@@ -209,63 +196,67 @@ export default {
 }
 
 @media (min-width: 767px) {
-.row-navigation {
-  background: white;
-  font-size: 12px;
- }
+  .row-navigation {
+    background: white;
+    font-size: 12px;
+  }
 
-.row-navigation a {
-  cursor: pointer;
-  color: #777;
-}
+  .row-navigation a {
+    cursor: pointer;
+    color: #777;
+  }
 
-.row-navigation a:hover {
-  font-weight: bold;
-}
+  .row-navigation a:hover {
+    font-weight: bold;
+  }
 
-.row-navigation a:hover {
-  border-bottom: 3px solid #05afc6;
-}
+  .row-navigation a:hover {
+    border-bottom: 3px solid #05afc6;
+  }
 
-.row-nav-item {
-  border-bottom: 3px solid white;
-}
+  .row-nav-item {
+    border-bottom: 3px solid white;
+  }
 
-.row-nav-item-container:nth-child(1),
-.row-nav-item-container:nth-child(14),
-.row-nav-item-container:nth-child(15),
-.row-nav-item-container:nth-child(16)
-{
-  display: none;
-}
-.row-nav-item-container:nth-child(2) a,
-.row-nav-item-container:nth-child(3) a
-{
-  color: #05afc6;
-  font-weight: bolder;
-}
+  .row-nav-item-container:nth-child(1),
+  .row-nav-item-container:nth-child(14),
+  .row-nav-item-container:nth-child(15),
+  .row-nav-item-container:nth-child(16)
+  {
+    display: none;
+  }
+  .row-nav-item-container:nth-child(2) a,
+  .row-nav-item-container:nth-child(3) a
+  {
+    color: #05afc6;
+    font-weight: bolder;
+  }
 
-.row-nav-item-container:nth-child(3) {
-  border-right: 1px solid navy;
-  padding-right: 7px;
-  height: 25px;
-}
+  .row-nav-item-container:nth-child(3) {
+    border-right: 1px solid navy;
+    padding-right: 7px;
+    height: 25px;
+  }
 
-.row-nav-item-container:nth-child(4) {
-  padding-left: 7px;
-}
+  .row-nav-item-container:nth-child(4) {
+    padding-left: 7px;
+  }
 
 
-.row-nav-item-container:nth-child(5) a {
-  font-weight: bolder;
-  color: red;
-}
+  .row-nav-item-container:nth-child(5) a {
+    font-weight: bolder;
+    color: red;
+  }
 
-.submenu-container {
-  border-top: 1px solid lightgray;
-  top: 157px;
-  width: 100%;
-}
+  .submenu-container {
+    border-top: 1px solid lightgray;
+    top: 157px;
+    width: 100%;
+  }
+  .submenu {
+    box-shadow: 0px 20px 30px -30px;
+
+  }
 
 }
 </style>
