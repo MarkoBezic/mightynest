@@ -34,24 +34,27 @@ export default {
 </script>
 
 <style scoped>
+@media(min-width: 767px) {
   .submenu-list {
     max-width: 700px;
   }
-
   li {
       border: none;
     }
-    li a {
-      font-size: 14px !important;
-    }
-    .featured-items > p > a {
-      color: #555 !important;
-    }
-    .sub-heading {
-      text-transform: uppercase !important;
-    }
-     .towels-img {
-      height: 150px;
-      width: auto;
-    }
+  li a {
+    font-size: 14px !important;
+  }
+  .featured-items > p > a {
+    color: #555 !important;
+  }
+  .sub-heading {
+    text-transform: uppercase !important;
+  }
+  .towels-img {
+  height: 150px;
+  width: auto;
+  }
+}
+
+  
 </style>
