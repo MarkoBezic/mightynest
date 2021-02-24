@@ -1,6 +1,6 @@
 <template>
-  <div>
-     <ul class="on-the-go submenu-list justify-content-center pt-md-4">
+  <div class="container-fluid p-0">
+     <ul class="on-the-go submenu-list justify-content-center pt-md-4 container-fluid p-0">
       <div>
         <p class=" pt-2 mb-2 pt-md-1" ><a href="#" class="text-dark font-weight-bolder text-decoration-none sub-heading">Lunch Gear</a></p>
         <li><a href="#" class="text-dark text-decoration-none">Lunch Boxes</a></li>
@@ -11,9 +11,9 @@
         <li><a href="#" class="text-dark text-decoration-none">Cloth Masks & Hand Sanitizers</a></li>
 
         <p class=" pt-3 mb-2" ><a href="#" class="text-dark font-weight-bolder text-decoration-none sub-heading">Water Bottles</a></p>
-        <li><a href="#" class="text-dark text-decoration-none">Stainless Steel Water Bottles</a></li>
-        <li><a href="#" class="text-dark text-decoration-none">Glass Water Bottles</a></li>
-        <li><a href="#" class="text-dark text-decoration-none">Kids Water Bottles</a></li>
+        <li class="d-md-none"><a href="#" class="text-dark text-decoration-none">Stainless Steel Water Bottles</a></li>
+        <li class="d-md-none"><a href="#" class="text-dark text-decoration-none">Glass Water Bottles</a></li>
+        <li class="d-md-none"><a href="#" class="text-dark text-decoration-none">Kids Water Bottles</a></li>
         <p class=" pt-3 mb-2" ><a href="#" class="text-dark font-weight-bolder text-decoration-none sub-heading">Coffee Tumblers</a></p>
         <p class=" pt-3 mb-2" ><a href="#" class="text-dark font-weight-bolder text-decoration-none sub-heading">Shopping</a></p>
       </div>
@@ -51,8 +51,9 @@ export default {
   @media (min-width: 767px) {
     .on-the-go {
       display: grid;
-      grid-template-columns: 180px 180px 200px 200px;
-      width: 1000px;
+      grid-template-columns: 180px 150px 200px 200px;
+      max-width: 800px;
+      transform: translateX(-18px);
     } 
     li {
       border: none;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="kitchen submenu-list m-md-auto justify-content-md-center pb-md-5 pt-md-3" >
+    <ul class="kitchen submenu-list pb-md-5 pt-md-3 justify-content-center container-fluid px-0" >
       <div class="column-1">
         <p class=" pt-2 mb-2" ><a href="#" class="text-dark font-weight-bolder text-decoration-none sub-heading">Kitchen</a></p>
         <li><a href="#" class="text-dark text-decoration-none">Kitchen Gift Boxes</a></li>
@@ -51,7 +51,7 @@ export default {
     .kitchen {
       display: grid;
       grid-template-columns: 180px 180px 200px 200px;
-      width: 1000px;
+      max-width: 900px;
     }
 
     li {
