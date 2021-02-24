@@ -1,12 +1,11 @@
 <template>
   <div class="row-navigation d-md-flex justify-content-center">
     <div class="row-nav-item-container" v-for="(nav,index) in navItems" :key="index">
-      <a class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none"  @mouseover="toggleMenu(index)" @mouseleave="toggleMenu(index)">
+      <a class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none"  @mouseover="toggleMenuTrue(index)" @mouseleave="toggleMenuFalse(index)">
         <font-awesome-icon v-if="nav.freeShipping"  class="truck mr-1 mt-1 d-md-none" icon="truck"></font-awesome-icon>
         {{ nav.heading }} 
         <font-awesome-icon v-if="nav.submenu" class="float-right mt-1 d-md-none" :class="!nav.menuOpen ? 'angle-down' : 'angle-up'" :icon="!nav.menuOpen ? 'angle-down' : 'angle-up'"></font-awesome-icon>
       </a>
-      
     </div>
 
     <div v-for="(nav, index) in navItems" :key="index" class="position-absolute submenu-container">
@@ -182,9 +181,13 @@ export default {
       }
   },
   methods: {
-    toggleMenu(id) {
-      this.navItems[id].menuOpen = !this.navItems[id].menuOpen;
-      this.navItems[id].displayContent = !this.navItems[id].displayContent;
+    toggleMenuTrue(id) {
+      this.navItems[id].menuOpen = true;
+      this.navItems[id].displayContent = true;
+    },
+    toggleMenuFalse(id) {
+      this.navItems[id].menuOpen = false;
+      this.navItems[id].displayContent = false;
     }
   }
 }
