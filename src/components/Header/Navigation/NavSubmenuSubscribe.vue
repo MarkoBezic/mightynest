@@ -1,6 +1,6 @@
 <template>
   <div class="menu-container">
-    <div class="menu-container-content container-fluid">
+    <div class="menu-container-content container-fluid px-0">
       <p class="title top-row text-dark font-weight-bolder mb-2 pt-1 px-md-3">Choose a monthly membership</p>
       <div class="column-1 px-md-3">
         <h6 class="mighty-blue pr-md-4" >Join the MightyFix</h6>
