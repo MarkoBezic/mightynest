@@ -17,6 +17,8 @@
       </div>
     </div>
 
+    <div class="nav-dividing-line"></div>
+
     <div class="position-relative d-inline-block">
       <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" id="menu-title-new">
         {{ navItems[3].heading }}
@@ -261,13 +263,16 @@ export default {
   }
 
   #menu-title-essential {
-    border-right: 1px solid navy;
-    padding-right: 18px !important;
+    padding-right: 12px !important;
+  }
+
+  .nav-dividing-line {
     height: 25px;
+    border-right: 1px solid navy;
   }
 
   #menu-title-new {
-    padding-left: 8px !important;
+    padding-left: 12px !important;
   }
 
   #menu-title-gifts {
