@@ -7,7 +7,6 @@
         <font-awesome-icon v-if="nav.submenu" class="float-right mt-1 d-md-none" :class="!nav.menuOpen ? 'angle-down' : 'angle-up'" :icon="!nav.menuOpen ? 'angle-down' : 'angle-up'"></font-awesome-icon>
       </a>
     </div>
-
     <div v-for="(nav, index) in navItems" :key="index" class="position-absolute submenu-container">
       <div :class="nav.displayContent ? '' : 'd-none'">
         <div class="submenu px-3" v-if="nav.menuOpen && nav.heading == 'Subscribe'">
