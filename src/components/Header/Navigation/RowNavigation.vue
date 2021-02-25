@@ -34,77 +34,77 @@
       </div>
     </div>
 
-     <div class="position-relative d-inline-block" @mouseover="navItems[5].menuOpen = true" @mouseleave="navItems[5].menuOpen = false">
-        <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
-          {{ navItems[5].heading }}
-        </div>
-        <div class="submenu position-fixed" v-if="navItems[5].menuOpen" @click="navItems[5].menuOpen = false">
-          <nav-submenu-kitchen />
-        </div>
+    <div class="position-relative d-inline-block" @mouseover="navItems[5].menuOpen = true" @mouseleave="navItems[5].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
+        {{ navItems[5].heading }}
       </div>
+      <div class="submenu position-fixed" v-if="navItems[5].menuOpen" @click="navItems[5].menuOpen = false">
+        <nav-submenu-kitchen />
+      </div>
+    </div>
 
-      <div class="position-relative d-inline-block" @mouseover="navItems[6].menuOpen = true" @mouseleave="navItems[6].menuOpen = false">
-        <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
-          {{ navItems[6].heading }}
-        </div>
-        <div class="submenu position-fixed" v-if="navItems[6].menuOpen" @click="navItems[6].menuOpen = false">
-          <nav-submenu-on-the-go />
-        </div>
+    <div class="position-relative d-inline-block" @mouseover="navItems[6].menuOpen = true" @mouseleave="navItems[6].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
+        {{ navItems[6].heading }}
       </div>
+      <div class="submenu position-fixed" v-if="navItems[6].menuOpen" @click="navItems[6].menuOpen = false">
+        <nav-submenu-on-the-go />
+      </div>
+    </div>
 
-      <div class="position-relative d-inline-block" @mouseover="navItems[7].menuOpen = true" @mouseleave="navItems[7].menuOpen = false">
-        <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
-          {{ navItems[7].heading }}
-        </div>
-        <div class="submenu position-fixed" v-if="navItems[7].menuOpen" @click="navItems[7].menuOpen = false">
-          <nav-submenu-cleaning />
-        </div>
+    <div class="position-relative d-inline-block" @mouseover="navItems[7].menuOpen = true" @mouseleave="navItems[7].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
+        {{ navItems[7].heading }}
       </div>
+      <div class="submenu position-fixed" v-if="navItems[7].menuOpen" @click="navItems[7].menuOpen = false">
+        <nav-submenu-cleaning />
+      </div>
+    </div>
 
-      <div class="position-relative d-inline-block" @mouseover="navItems[8].menuOpen = true" @mouseleave="navItems[8].menuOpen = false">
-        <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
-          {{ navItems[8].heading }}
-        </div>
-        <div class="submenu position-fixed" v-if="navItems[8].menuOpen" @click="navItems[8].menuOpen = false">
-          <nav-submenu-body />
-        </div>
+    <div class="position-relative d-inline-block" @mouseover="navItems[8].menuOpen = true" @mouseleave="navItems[8].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
+        {{ navItems[8].heading }}
       </div>
+      <div class="submenu position-fixed" v-if="navItems[8].menuOpen" @click="navItems[8].menuOpen = false">
+        <nav-submenu-body />
+      </div>
+    </div>
 
-      <div class="position-relative d-inline-block" @mouseover="navItems[9].menuOpen = true" @mouseleave="navItems[9].menuOpen = false">
-        <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
-          {{ navItems[9].heading }}
-        </div>
-        <div class="submenu position-fixed" v-if="navItems[9].menuOpen" @click="navItems[9].menuOpen = false">
-          <nav-submenu-wellness />
-        </div>
+    <div class="position-relative d-inline-block" @mouseover="navItems[9].menuOpen = true" @mouseleave="navItems[9].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
+        {{ navItems[9].heading }}
       </div>
+      <div class="submenu position-fixed" v-if="navItems[9].menuOpen" @click="navItems[9].menuOpen = false">
+        <nav-submenu-wellness />
+      </div>
+    </div>
 
-      <div class="position-relative d-inline-block" @mouseover="navItems[10].menuOpen = true" @mouseleave="navItems[10].menuOpen = false">
-        <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
-          {{ navItems[10].heading }}
-        </div>
-        <div class="submenu position-fixed" v-if="navItems[10].menuOpen" @click="navItems[10].menuOpen = false">
-          <nav-submenu-kids />
-        </div>
+    <div class="position-relative d-inline-block" @mouseover="navItems[10].menuOpen = true" @mouseleave="navItems[10].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
+        {{ navItems[10].heading }}
       </div>
+      <div class="submenu position-fixed" v-if="navItems[10].menuOpen" @click="navItems[10].menuOpen = false">
+        <nav-submenu-kids />
+      </div>
+    </div>
 
-      <div class="position-relative d-inline-block" @mouseover="navItems[11].menuOpen = true" @mouseleave="navItems[11].menuOpen = false">
-        <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
-          {{ navItems[11].heading }}
-        </div>
-        <div class="submenu position-fixed" v-if="navItems[11].menuOpen" @click="navItems[11].menuOpen = false">
-          <nav-submenu-pets />
-        </div>
+    <div class="position-relative d-inline-block" @mouseover="navItems[11].menuOpen = true" @mouseleave="navItems[11].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
+        {{ navItems[11].heading }}
       </div>
+      <div class="submenu position-fixed" v-if="navItems[11].menuOpen" @click="navItems[11].menuOpen = false">
+        <nav-submenu-pets />
+      </div>
+    </div>
 
-      <div class="position-relative d-inline-block" @mouseover="navItems[12].menuOpen = true" @mouseleave="navItems[12].menuOpen = false">
-        <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
-          {{ navItems[12].heading }}
-        </div>
-        <div class="submenu position-fixed" v-if="navItems[12].menuOpen" @click="navItems[12].menuOpen = false">
-          <nav-submenu-sale />
-        </div>
+    <div class="position-relative d-inline-block" @mouseover="navItems[12].menuOpen = true" @mouseleave="navItems[12].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" >
+        {{ navItems[12].heading }}
       </div>
+      <div class="submenu position-fixed" v-if="navItems[12].menuOpen" @click="navItems[12].menuOpen = false">
+        <nav-submenu-sale />
+      </div>
+    </div>
   </div>
 
 </div>
