@@ -59,9 +59,9 @@ export default {
 
 <style scoped>
   .footer {
-  background:  #05afc6;
-  font-size: 14px;
-  line-height: 23px;
+    background:  #05afc6;
+    font-size: 14px;
+    line-height: 23px;
   }
   .footer a {
     color: white;
@@ -81,10 +81,6 @@ export default {
     .footer {
       font-size: 12px;
       line-height: 20px;
-    }
-
-    .footer-inner-container {
-
     }
 
     .all-prices-usd {
