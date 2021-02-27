@@ -26,8 +26,11 @@ export default {
     MainJoinMightyFix,
     MainOurPledge,
     Footer,
-  }
+  },
+
 }
+
+
 </script>
 
 <style>
@@ -46,5 +49,6 @@ body {
 .mighty-blue:hover {
   color: #05afc6;
 }
+
 
 </style>

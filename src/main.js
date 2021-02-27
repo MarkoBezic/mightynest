@@ -1,8 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
-import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import "../node_modules/bootstrap-vue/dist/bootstrap-vue.css";
 import "../src/css/app.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -13,6 +11,7 @@ import {
   faAngleUp,
   faCheckCircle,
   faCheck,
+  faPlusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { 
   faFacebook,
@@ -32,13 +31,9 @@ library.add(
   faFacebook,
   faPinterest,
   faInstagramSquare,
+  faPlusCircle,
 );
 Vue.component("font-awesome-icon", FontAwesomeIcon);
-Vue.config.productionTip = false;
-
-Vue.use(BootstrapVue);
-Vue.use(IconsPlugin);
-
 Vue.config.productionTip = false;
 
 new Vue({
