@@ -1,80 +1,146 @@
 <template>
-  <div class="row-navigation d-md-flex justify-content-center">
-    <div class="row-nav-item-container" v-for="(nav,index) in navItems" :key="index">
-      <a class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none"  @mouseover="toggleMenuTrue(index)" @mouseleave="toggleMenuFalse(index)">
-        <font-awesome-icon v-if="nav.freeShipping"  class="truck mr-1 mt-1 d-md-none" icon="truck"></font-awesome-icon>
-        {{ nav.heading }} 
-        <font-awesome-icon v-if="nav.submenu" class="float-right mt-1 d-md-none" :class="!nav.menuOpen ? 'angle-down' : 'angle-up'" :icon="!nav.menuOpen ? 'angle-down' : 'angle-up'"></font-awesome-icon>
-      </a>
-    </div>
-
-    <div v-for="(nav, index) in navItems" :key="index" class="position-absolute submenu-container">
-      <div :class="nav.displayContent ? '' : 'd-none'">
-        <div class="submenu px-3" v-if="nav.menuOpen && nav.heading == 'Subscribe'">
-          <nav-submenu-subscribe />
-        </div>
-        <div class="submenu px-4 py-2" v-if="nav.menuOpen && nav.heading == 'Gifts'">
-          <nav-submenu-gifts />
-        </div>
-        <div class="submenu px-4" v-if="nav.menuOpen && nav.heading == 'Kitchen'">
-            <nav-submenu-kitchen />
-        </div>
-        <div class="submenu px-4 pb-1" v-if="nav.menuOpen && nav.heading == 'On the go'">
-          <nav-submenu-on-the-go />
-        </div>
-        <div class="submenu px-4 pb-1" v-if="nav.menuOpen && nav.heading == 'Cleaning'">
-          <nav-submenu-cleaning />
-        </div>
-        <div class="submenu px-4 pb-1" v-if="nav.menuOpen && nav.heading == 'Body'">
-            <nav-submenu-body />
-        </div>
-        <div class="submenu px-4 pb-1" v-if="nav.menuOpen && nav.heading == 'Wellness'">
-          <nav-submenu-wellness />
-        </div>
-        <div class="submenu px-4 pb-1" v-if="nav.menuOpen && nav.heading == 'Kids'">
-          <nav-submenu-kids />
-        </div>
-        <div class="submenu px-4 pb-3" v-if="nav.menuOpen && nav.heading == 'Pets'">
-          <nav-submenu-pets />
-        </div>
-        <div class="submenu px-4 pb-3" v-if="nav.menuOpen && nav.heading == 'Sale'">
-          <nav-submenu-sale />
-        </div>
+<div>
+  <div class="d-none d-md-flex row-navigation justify-content-center">
+    <div class="position-relative d-inline-block" @mouseover="navItems[1].menuOpen = true" @mouseleave="navItems[1].menuOpen = false">
+      <div class="menu-title-blue row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(1)">
+        {{ navItems[1].heading }}
+      </div> 
+      <div class="submenu position-fixed" v-if="navItems[1].menuOpen" @click="navItems[1].menuOpen = false">
+        <nav-submenu-subscribe />
       </div>
-      
+    </div>
+    
+    <div class="position-relative d-inline-block">
+      <div class="menu-title-blue row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(2)" id="menu-title-essential">
+        {{ navItems[2].heading }}
+      </div>
     </div>
 
+    <div class="nav-dividing-line"></div>
+
+    <div class="position-relative d-inline-block">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(3)" id="menu-title-new">
+        {{ navItems[3].heading }}
+      </div>
+    </div>
+
+    <div class="position-relative d-inline-block" @mouseover="navItems[4].menuOpen = true" @mouseleave="navItems[4].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(4)" id="menu-title-gifts">
+        {{ navItems[4].heading }}
+      </div>
+      <div class="submenu position-fixed" v-if="navItems[4].menuOpen" @click="navItems[4].menuOpen = false">
+        <nav-submenu-gifts />
+      </div>
+    </div>
+
+    <div class="position-relative d-inline-block" @mouseover="navItems[5].menuOpen = true" @mouseleave="navItems[5].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(5)">
+        {{ navItems[5].heading }}
+      </div>
+      <div class="submenu position-fixed" v-if="navItems[5].menuOpen" @click="navItems[5].menuOpen = false">
+        <nav-submenu-kitchen />
+      </div>
+    </div>
+
+    <div class="position-relative d-inline-block" @mouseover="navItems[6].menuOpen = true" @mouseleave="navItems[6].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(6)">
+        {{ navItems[6].heading }}
+      </div>
+      <div class="submenu position-fixed" v-if="navItems[6].menuOpen" @click="navItems[6].menuOpen = false">
+        <nav-submenu-on-the-go />
+      </div>
+    </div>
+
+    <div class="position-relative d-inline-block" @mouseover="navItems[7].menuOpen = true" @mouseleave="navItems[7].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(7)">
+        {{ navItems[7].heading }}
+      </div>
+      <div class="submenu position-fixed" v-if="navItems[7].menuOpen" @click="navItems[7].menuOpen = false">
+        <nav-submenu-cleaning />
+      </div>
+    </div>
+
+    <div class="position-relative d-inline-block" @mouseover="navItems[8].menuOpen = true" @mouseleave="navItems[8].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(8)">
+        {{ navItems[8].heading }}
+      </div>
+      <div class="submenu position-fixed" v-if="navItems[8].menuOpen" @click="navItems[8].menuOpen = false">
+        <nav-submenu-body />
+      </div>
+    </div>
+
+    <div class="position-relative d-inline-block" @mouseover="navItems[9].menuOpen = true" @mouseleave="navItems[9].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(9)">
+        {{ navItems[9].heading }}
+      </div>
+      <div class="submenu position-fixed" v-if="navItems[9].menuOpen" @click="navItems[9].menuOpen = false">
+        <nav-submenu-wellness />
+      </div>
+    </div>
+
+    <div class="position-relative d-inline-block" @mouseover="navItems[10].menuOpen = true" @mouseleave="navItems[10].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(10)">
+        {{ navItems[10].heading }}
+      </div>
+      <div class="submenu position-fixed" v-if="navItems[10].menuOpen" @click="navItems[10].menuOpen = false">
+        <nav-submenu-kids />
+      </div>
+    </div>
+
+    <div class="position-relative d-inline-block" @mouseover="navItems[11].menuOpen = true" @mouseleave="navItems[11].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(11)">
+        {{ navItems[11].heading }}
+      </div>
+      <div class="submenu position-fixed" v-if="navItems[11].menuOpen" @click="navItems[11].menuOpen = false">
+        <nav-submenu-pets />
+      </div>
+    </div>
+
+    <div class="position-relative d-inline-block" @mouseover="navItems[12].menuOpen = true" @mouseleave="navItems[12].menuOpen = false">
+      <div class="row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(12)">
+        {{ navItems[12].heading }}
+      </div>
+      <div class="submenu position-fixed" v-if="navItems[12].menuOpen" @click="navItems[12].menuOpen = false">
+        <nav-submenu-sale />
+      </div>
+    </div>
   </div>
+
+</div>
+
 </template>
 
 <script>
-import NavSubmenuBody from './NavSubmenuBody.vue';
-import NavSubmenuCleaning from './NavSubmenuCleaning.vue';
-import NavSubmenuGifts from './NavSubmenuGifts.vue';
-import NavSubmenuKids from './NavSubmenuKids.vue';
-import NavSubmenuKitchen from './NavSubmenuKitchen.vue';
-import NavSubmenuOnTheGo from './NavSubmenuOnTheGo.vue';
-import NavSubmenuPets from './NavSubmenuPets.vue';
-import NavSubmenuSale from './NavSubmenuSale.vue';
 import NavSubmenuSubscribe from './NavSubmenuSubscribe.vue';
+import NavSubmenuGifts from './NavSubmenuGifts.vue';
+import NavSubmenuKitchen from './NavSubmenuKitchen.vue';
+import NavSubmenuCleaning from './NavSubmenuCleaning.vue';
+import NavSubmenuPets from './NavSubmenuPets.vue';
+import NavSubmenuKids from './NavSubmenuKids.vue';
+import NavSubmenuOnTheGo from './NavSubmenuOnTheGo.vue';
+import NavSubmenuBody from './NavSubmenuBody.vue';
+import NavSubmenuSale from './NavSubmenuSale.vue';
 import NavSubmenuWellness from './NavSubmenuWellness.vue';
+
 
 export default {
   components: { 
     NavSubmenuSubscribe, 
-    NavSubmenuGifts, 
-    NavSubmenuKitchen, 
-    NavSubmenuOnTheGo, 
+    NavSubmenuGifts,
+    NavSubmenuKitchen,
     NavSubmenuCleaning,
-    NavSubmenuBody,
-    NavSubmenuWellness,
-    NavSubmenuKids,
     NavSubmenuPets,
+    NavSubmenuKids,
+    NavSubmenuOnTheGo,
+    NavSubmenuBody,
     NavSubmenuSale,
+    NavSubmenuWellness, 
+    
   },
   name: 'RowNavigation',
   data() {
       return {
+        isActive: false,
         menuOpen: false,
         navItems: [
           { 
@@ -89,7 +155,6 @@ export default {
             submenu: true,
             menuOpen: false,
             displayContent: false,
-            content: 'Subscribe dropdown'
           },
           { 
             heading: 'Essentials',
@@ -108,7 +173,6 @@ export default {
             submenu: true,
             menuOpen: false,
             displayContent: false,
-            content: 'Gifts Dropdown'           
           },
           { 
             heading: 'Kitchen',
@@ -181,83 +245,62 @@ export default {
       }
   },
   methods: {
-    toggleMenuTrue(id) {
-      this.navItems[id].menuOpen = true;
-      this.navItems[id].displayContent = true;
-    },
-    toggleMenuFalse(id) {
-      this.navItems[id].menuOpen = false;
-      this.navItems[id].displayContent = false;
+    activeNav: function(index) {
+      return {
+        'row-nav-item-active': this.navItems[index].menuOpen
+      }
     }
   }
 }
 </script>
 
 <style scoped>
-.row-navigation {
-  display: none;
-}
 
 @media (min-width: 767px) {
   .row-navigation {
     background: white;
     font-size: 12px;
+    position: relative;
   }
 
-  .row-navigation a {
-    cursor: pointer;
-    color: #777;
+  .menu-title-blue {
+    color: #05afc6 !important;
+    font-weight: bolder
   }
 
-  .row-navigation a:hover {
-    font-weight: bold;
+  #menu-title-essential {
+    padding-right: 12px !important;
   }
 
-  .row-navigation a:hover {
-    border-bottom: 3px solid #05afc6;
-  }
-
-  .row-nav-item {
-    border-bottom: 3px solid white;
-  }
-
-  .row-nav-item-container:nth-child(1),
-  .row-nav-item-container:nth-child(14),
-  .row-nav-item-container:nth-child(15),
-  .row-nav-item-container:nth-child(16)
-  {
-    display: none;
-  }
-  .row-nav-item-container:nth-child(2) a,
-  .row-nav-item-container:nth-child(3) a
-  {
-    color: #05afc6;
-    font-weight: bolder;
-  }
-
-  .row-nav-item-container:nth-child(3) {
-    border-right: 1px solid navy;
-    padding-right: 7px;
+  .nav-dividing-line {
     height: 25px;
+    border-right: 1px solid navy;
   }
 
-  .row-nav-item-container:nth-child(4) {
-    padding-left: 7px;
+  #menu-title-new {
+    padding-left: 12px !important;
   }
 
-
-  .row-nav-item-container:nth-child(5) a {
+  #menu-title-gifts {
     font-weight: bolder;
     color: red;
   }
 
-  .submenu-container {
-    border-top: 1px solid lightgray;
-    top: 157px;
-    width: 100%;
+  .row-nav-item:hover, .row-nav-item-active {
+    font-weight: bold !important;
+    border-bottom: 3px solid #05afc6 !important;
   }
+
+  .row-nav-item {
+    border-bottom: 3px solid white;
+    cursor: pointer;
+    color: #777;
+  }
+
   .submenu {
     box-shadow: 0px 20px 30px -30px;
+    width: 100vw;
+    left: 0px;
 
   }
 

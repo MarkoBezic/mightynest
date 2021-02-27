@@ -59,9 +59,9 @@ export default {
 
 <style scoped>
   .footer {
-    background:  #05afc6;
-    font-size: 14px;
-    line-height: 23px;
+  background:  #05afc6;
+  font-size: 14px;
+  line-height: 23px;
   }
   .footer a {
     color: white;
