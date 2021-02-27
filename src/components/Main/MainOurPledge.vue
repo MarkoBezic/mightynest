@@ -40,6 +40,7 @@ export default {
 .trusted-list li {
   max-width: 800px;
   font-size: 14px;
+  border-bottom: none;
 }
 
 @media (min-width: 767px) {

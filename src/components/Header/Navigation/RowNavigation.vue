@@ -1,7 +1,6 @@
 <template>
 <div>
   <div class="d-none d-md-flex row-navigation justify-content-center">
-  <!-- @marko todo add functionality for menu title to remain active when mouseover moves to submenu -->
     <div class="position-relative d-inline-block" @mouseover="navItems[1].menuOpen = true" @mouseleave="navItems[1].menuOpen = false">
       <div class="menu-title-blue row-nav-item d-block px-1 pt-1 pb-3 mx-1 text-decoration-none" :class="activeNav(1)">
         {{ navItems[1].heading }}

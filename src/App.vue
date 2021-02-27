@@ -5,6 +5,7 @@
     <Main />
     <MainJoinMightyFix />
     <MainOurPledge />
+    <Footer />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Header from './components/Header/Header.vue'
 import Main from './components/Main/Main'
 import MainJoinMightyFix from './components/Main/MainJoinMightyFix'
 import MainOurPledge from './components/Main/MainOurPledge'
+import Footer from './components/Footer/index'
 
 export default {
   name: 'App',
@@ -22,7 +24,8 @@ export default {
     Banner,
     Main,
     MainJoinMightyFix,
-    MainOurPledge
+    MainOurPledge,
+    Footer,
   }
 }
 </script>
