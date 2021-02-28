@@ -2,6 +2,7 @@
 <template>
   <div>
     <button class="cart mt-2 mr-1" @click="toggleSlide"><img class="cart m-2" src="https://d24zxkcptsuti0.cloudfront.net/assets/nav/cartGray_thin-8fe991da39ceeb0ad62fb61399527f5414bb7b46f6b544b57536e9c934e6cce8.png" alt="shopping cart icon"/></button>
+    <a href="#" @click="toggleSlide" :class="[isOpen ? 'overlay' : 'overlay-closed']"></a>
     <div class="sidebar-right" :class="[!isOpen ? 'closedSidebar' : 'openSidebar']">
       <div class="cart-header p-3 m-1 d-flex justify-content-between">
         <h5 class="text-white">Shopping Cart</h5>
@@ -65,7 +66,7 @@ export default {
     background: white;
     z-index: 3;
     position: fixed;
-    top: 92px;
+    top: 0;
     height: 100%;
     width: 390px;
     box-shadow: 3px 10px 15px 0px; 
@@ -113,6 +114,20 @@ export default {
 
   a:hover {
     color:#0398ac;
+  }
+
+  .overlay {
+    width: 1000vh;
+    height: 1000vh;
+    background: white;
+    opacity: .7;
+    position: absolute;
+    transform: translate(-2400px, -52px);
+    z-index: 2;
+  }
+
+  .overlay-closed {
+    display: none;
   }
 
   .subtotal-txt {

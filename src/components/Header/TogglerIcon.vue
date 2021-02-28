@@ -12,11 +12,7 @@
 <script>
 export default {
   name: 'TogglerIcon',
-  data() {
-    return {
-      isOpen: false
-    }
-  },
+  props: ['isOpen'],
   methods: {
     toggleSlide(e){
       e.preventDefault;

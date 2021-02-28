@@ -1,6 +1,7 @@
   <template>
   <div>
-    <button class="nav-button border-0 mt-1 d-md-none"  @click="toggleSlide"><toggler-icon /></button>
+    <button class="nav-button border-0 mt-1 d-md-none"  @click="toggleSlide"><toggler-icon :isOpen="isOpen" /></button>
+    <a href="#" @click="toggleSlide" :class="[isOpen ? 'overlay' : 'overlay-closed']"></a>
     <div class="sidebar-left" :class="[!isOpen ? 'closedSidebar' : 'openSidebar']">
       <Navigation />
     </div>
@@ -52,7 +53,21 @@ export default {
     position: fixed;
     background-color: white;
     top: 40px;
+    z-index: 4;
+  }
+
+   .overlay {
+    width: 1000vh;
+    height: 1000vh;
+    background: white;
+    opacity: .7;
+    position: absolute;
+    transform: translate(-100px, -52px);
     z-index: 3;
+  }
+
+  .overlay-closed {
+    display: none;
   }
 
   @media(min-width: 767px) {
