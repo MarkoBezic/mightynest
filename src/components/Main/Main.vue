@@ -16,7 +16,7 @@
       <hr class="green-line align-self-center m-0">
 
       <h6 class="mighty-blue m-3">Support businesses that care</h6>
-      <p>Members get up to 35% off everything -- every day! Not to mention free shipping on their monthly box</p>
+      <p>Every company we work with is passionate about creating remarkable products that are good for people and the planet.</p>
 
       <h6 class="mighty-blue my-3">Ready to join?</h6>
       <green-button class="green-button align-self-center p-3 mt-2" txt="GET STARTED NOW"></green-button>
