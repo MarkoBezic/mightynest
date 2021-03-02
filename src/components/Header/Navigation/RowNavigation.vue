@@ -140,7 +140,6 @@ export default {
   name: 'RowNavigation',
   data() {
       return {
-        isActive: false,
         menuOpen: false,
         navItems: [
           { 

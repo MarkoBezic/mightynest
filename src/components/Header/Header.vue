@@ -3,8 +3,11 @@
     <div class="header">
       <div class="shipping-banner d-md-flex flex-md-row">
         <p class="text-white text-center d-md-flex p-2 pl-2 my-auto  ">{{ msg }}</p>
-        <p class="d-none d-md-flex text-white ml-auto p-2 px-3 my-auto ">Our Mission</p>
-        <p class="d-none d-md-flex text-white p-2 px-md-4 my-auto ">Blog</p>
+        <p class="d-none d-md-flex text-white ml-auto p-2 px-3 my-auto "><a href="#" class="our-mission">Our Mission</a></p>
+        <div class="position-relative" @mouseover="dropdownOpen = true" @mouseleave="dropdownOpen = false" @click="dropdownOpen = false">
+          <p class="d-none d-md-flex text-white p-2 px-md-4 my-auto "><a href="#" class="blog">Blog</a></p>
+          <blog-dropdown class="position-fixed"  v-if="dropdownOpen"  />
+        </div>
       </div>
       <div class="main-navbar d-flex">
         <input class="align-self-center ml-3 d-none d-md-block px-1 py-2 t" type="text" placeholder="What are you looking for?">
@@ -25,6 +28,7 @@ import Sidebar from './Sidebar.vue'
 import SearchIcon from './SearchIcon'
 import ShoppingCart from './ShoppingCart.vue'
 import RowNavigation from './Navigation/RowNavigation.vue'
+import BlogDropdown from './BlogDropdown.vue'
 
 export default {
   components: { 
@@ -32,10 +36,16 @@ export default {
     SearchIcon,
     ShoppingCart,
     RowNavigation,
+    BlogDropdown,
     },
   name: 'Header',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      dropdownOpen: false
+    }
   }
 }
 
@@ -53,6 +63,9 @@ export default {
   .shipping-banner {
     background-color: #89cf31;
     font-size: 11px;
+  }
+  .our-mission:visited, .blog:visited {
+    color: white;
   }
 
   .main-navbar {
@@ -75,7 +88,6 @@ export default {
   .cart {
     margin-left: auto;
   }
-
   
   @media (min-width: 767px) {
     .shipping-banner {
