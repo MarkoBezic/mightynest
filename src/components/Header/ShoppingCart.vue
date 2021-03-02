@@ -6,21 +6,21 @@
     <div class="sidebar-right" :class="[!isOpen ? 'closedSidebar' : 'openSidebar']">
       <div class="cart-header p-3 m-1 d-flex justify-content-between">
         <h5 class="text-white">Shopping Cart</h5>
-        <button class="checkout-btn px-2 py-1">Checkout</button>
+        <button class="checkout-btn px-2 py-1" @click="toggleSlide">Checkout</button>
       </div>
       <div class="cart-empty d-flex flex-column text-center m-5 p-1 py-4">
         <img class="cart-empty-img m-2 m-auto" src="https://d24zxkcptsuti0.cloudfront.net/assets/nav/cartEmpty-c0c2d41e56b560fc248d1d75edc75971afdc7746dc345d60fb1a24c0b88cbbc0.png" alt="shopping cart icon"/>
         <p class="my-2">Oh no! Your cart is empty...</p>
         <div class="blue-line align-self-center mb-2"></div>
-        <small>Simply subscribe to $9+ in <a href="#">eligible products</a> to receive free shipping* and Member Only Prices.</small>
-        <a class="link-learn-more m-2"><font-awesome-icon class="plus-circle mx-2" :icon="['fas', 'plus-circle']"></font-awesome-icon>Learn more</a>
+        <small>Simply subscribe to $9+ in <a href="#" @click="toggleSlide">eligible products</a> to receive free shipping* and Member Only Prices.</small>
+        <a class="link-learn-more m-2" @click="toggleSlide"><font-awesome-icon class="plus-circle mx-2" :icon="['fas', 'plus-circle']"></font-awesome-icon>Learn more</a>
       </div>
       <div class="subtotal d-flex">
         <p class="subtotal-txt ml-auto mr-5 pt-3 pb-1">0 Items Subtotal: $0:00</p>
       </div>
       <div class="d-inline-flex flex-column">
-        <button class="cart-btn-view px-5 mx-3 mb-2">VIEW CART</button>
-        <button class="cart-btn-checkout px-5 mx-3 my-2 text-white">CHECKOUT</button>
+        <button class="cart-btn-view px-5 mx-3 mb-2" @click="toggleSlide">VIEW CART</button>
+        <button class="cart-btn-checkout px-5 mx-3 my-2 text-white" @click="toggleSlide">CHECKOUT</button>
       </div>
     </div>
   </div>
