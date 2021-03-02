@@ -25,7 +25,7 @@
     </div>
     <div class="d-flex flex-column main-our-team px-4">
       <h6 class="p-2">Our team loves to reserach and test the best healthy green products</h6>
-      <img src="../../images/team_c@2x.jpg" alt="MightyNest team">
+      <img class="img-fluid" src="../../images/team_c@2x.jpg" alt="MightyNest team">
       <p class="py-4">
         We can't wait for you to discover and try our favorites! We've
         helped over 270,000 families make better choices for their 

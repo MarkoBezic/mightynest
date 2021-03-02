@@ -45,7 +45,6 @@ export default {
       dropdownOpen: false
     }
   },
-  
 }
 
 </script>
