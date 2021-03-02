@@ -66,7 +66,7 @@ export default {
     background: white;
     z-index: 3;
     position: fixed;
-    top: 0;
+    top: 93px;
     height: 100%;
     width: 390px;
     box-shadow: 3px 10px 15px 0px; 
@@ -158,4 +158,9 @@ export default {
     height: 50px;
   }
 
+@media (min-width: 767px) {
+  .sidebar-right {
+    top: 0;
+  }
+}
 </style>

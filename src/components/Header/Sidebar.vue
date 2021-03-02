@@ -54,7 +54,7 @@ export default {
     position: fixed;
     background-color: white;
     top: 40px;
-    z-index: 3;
+    z-index: 4;
   }
 
    .overlay {
