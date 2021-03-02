@@ -1,5 +1,5 @@
 <template>
-  <div class="py-md-4">
+  <div class="px-4 pb-1 py-md-4">
     <ul class="submenu-list d-md-flex container-fluid p-0 justify-content-md-center">
       <div class="column-1 px-md-4">
         <p class=" pt-2 mb-2" ><a href="#" class="text-dark font-weight-bolder text-decoration-none sub-heading">Wellness</a></p>

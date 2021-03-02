@@ -44,13 +44,14 @@ export default {
     return {
       dropdownOpen: false
     }
-  }
+  },
+  
 }
 
 </script>
 
 <style scoped>
-
+  
   .header {
     box-shadow: 0 -3px 10px;
     position: fixed;

@@ -13,7 +13,12 @@ export default {
   components: {
     GreenButton
   },
-  name: 'Banner'
+  name: 'Banner',
+  methods: {
+    bannerReachedTopOfViewport() {
+      alert("trigger animation");
+    }
+  }
 }
 </script>
 

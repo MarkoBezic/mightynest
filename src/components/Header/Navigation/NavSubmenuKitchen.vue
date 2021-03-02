@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="px-4">
     <ul class="kitchen submenu-list pb-md-5 pt-md-3 justify-content-center container-fluid px-0" >
       <div class="column-1">
         <p class=" pt-2 mb-2" ><a href="#" class="text-dark font-weight-bolder text-decoration-none sub-heading">Kitchen</a></p>

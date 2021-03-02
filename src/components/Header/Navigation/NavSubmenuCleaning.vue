@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="px-4 pb-1">
     <ul class="submenu-list d-md-flex justify-content-md-between container-fluid p-0 py-md-4">
       <div>
         <p class=" pt-2 mb-2" ><a href="#" class="text-dark font-weight-bolder text-decoration-none sub-heading">Green Cleaning</a></p>

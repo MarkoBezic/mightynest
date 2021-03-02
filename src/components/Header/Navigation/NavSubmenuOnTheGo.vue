@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid p-0">
+  <div class="container-fluid  px-4 pb-1 pt-0">
      <ul class="on-the-go submenu-list justify-content-center pt-md-4 container-fluid p-0">
       <div>
         <p class=" pt-2 mb-2 pt-md-1" ><a href="#" class="text-dark font-weight-bolder text-decoration-none sub-heading">Lunch Gear</a></p>

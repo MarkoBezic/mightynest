@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="px-4 pb-1">
     <ul class="submenu-list d-md-flex container-fluid p-0 py-md-4">
       <div class="px-md-2">
         <p class=" pt-2 mb-2" ><a href="#" class="text-dark font-weight-bolder text-decoration-none sub-heading">Bath & Body</a></p>

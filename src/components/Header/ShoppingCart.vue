@@ -122,7 +122,7 @@ export default {
     background: white;
     opacity: .7;
     position: absolute;
-    transform: translate(-2400px, -52px);
+    transform: translate(-1600px, -52px);
     z-index: 3;
   }
 

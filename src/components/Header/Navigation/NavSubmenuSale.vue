@@ -1,5 +1,5 @@
 <template>
-  <div class="py-md-4 d-md-flex justify-content-md-center">
+  <div class="px-4 pb-3 py-md-4 d-md-flex justify-content-md-center">
     <ul class="submenu-list d-md-flex">
      <div class="column-1 px-md-5">
       <p class="pt-2 mb-2" ><a href="#" class="text-dark font-weight-bolder text-decoration-none">Sales</a></p>

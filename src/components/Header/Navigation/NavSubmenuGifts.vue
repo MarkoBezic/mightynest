@@ -1,5 +1,5 @@
 <template>
-  <div class="gifts-container mx-md-auto my-md-3">
+  <div class="gifts-container mx-md-auto my-md-3 px-4 py-2">
     <ul class="submenu-list column-1 ml-md-2">
       <p class=" pt-2 mb-2" ><a href="#" class="text-dark font-weight-bolder text-decoration-none">Gifts</a></p>
       <li><a href="#" class="text-dark text-decoration-none">Seasonal & Holiday</a></li>

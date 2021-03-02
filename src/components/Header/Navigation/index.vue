@@ -7,34 +7,34 @@
         <font-awesome-icon v-if="nav.submenu" class="float-right mt-1" :class="!nav.menuOpen ? 'angle-down' : 'angle-up'" :icon="!nav.menuOpen ? 'angle-down' : 'angle-up'"></font-awesome-icon>
       </a>
       <div class="d-md-none" :class="nav.displayContent ? '' : 'd-none'">
-        <div class="submenu px-3" v-if="nav.menuOpen && nav.heading == 'Subscribe'">
+        <div class="submenu" v-if="nav.menuOpen && nav.heading == 'Subscribe'">
           <nav-submenu-subscribe />
         </div>
-        <div class="submenu px-4 py-2" v-if="nav.menuOpen && nav.heading == 'Gifts'">
+        <div class="submenu" v-if="nav.menuOpen && nav.heading == 'Gifts'">
           <nav-submenu-gifts />
         </div>
-        <div class="submenu px-4" v-if="nav.menuOpen && nav.heading == 'Kitchen'">
-            <nav-submenu-kitchen />
+        <div class="submenu" v-if="nav.menuOpen && nav.heading == 'Kitchen'">
+          <nav-submenu-kitchen />
         </div>
-        <div class="submenu px-4 pb-1" v-if="nav.menuOpen && nav.heading == 'On the go'">
+        <div class="submenu" v-if="nav.menuOpen && nav.heading == 'On the go'">
           <nav-submenu-on-the-go />
         </div>
-        <div class="submenu px-4 pb-1" v-if="nav.menuOpen && nav.heading == 'Cleaning'">
+        <div class="submenu" v-if="nav.menuOpen && nav.heading == 'Cleaning'">
           <nav-submenu-cleaning />
         </div>
-        <div class="submenu px-4 pb-1" v-if="nav.menuOpen && nav.heading == 'Body'">
-            <nav-submenu-body />
+        <div class="submenu" v-if="nav.menuOpen && nav.heading == 'Body'">
+          <nav-submenu-body />
         </div>
-        <div class="submenu px-4 pb-1" v-if="nav.menuOpen && nav.heading == 'Wellness'">
+        <div class="submenu" v-if="nav.menuOpen && nav.heading == 'Wellness'">
           <nav-submenu-wellness />
         </div>
-        <div class="submenu px-4 pb-1" v-if="nav.menuOpen && nav.heading == 'Kids'">
+        <div class="submenu" v-if="nav.menuOpen && nav.heading == 'Kids'">
           <nav-submenu-kids />
         </div>
-        <div class="submenu px-4 pb-3" v-if="nav.menuOpen && nav.heading == 'Pets'">
+        <div class="submenu" v-if="nav.menuOpen && nav.heading == 'Pets'">
           <nav-submenu-pets />
         </div>
-        <div class="submenu px-4 pb-3" v-if="nav.menuOpen && nav.heading == 'Sale'">
+        <div class="submenu" v-if="nav.menuOpen && nav.heading == 'Sale'">
           <nav-submenu-sale />
         </div>
       </div>
@@ -69,12 +69,19 @@ export default {
   },
   name: 'Navigation',
   props: ['navItems'],
+  data() {
+    return {
+      submenus: [
+        { 'heading': 'Subscribe', 'component': '<nav-submenu-subscribe />'},
+      ]
+    }
+  },
   methods: {
     toggleMenu(id) {
       this.navItems[id].menuOpen = !this.navItems[id].menuOpen;
       this.navItems[id].displayContent = !this.navItems[id].displayContent;
     }
-  }
+  },
 }
 </script>
 
