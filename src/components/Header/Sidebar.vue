@@ -3,7 +3,7 @@
     <button class="nav-button border-0 mt-1 d-md-none"  @click="toggleSlide"><toggler-icon :isOpen="isOpen" /></button>
     <a href="#" @click="toggleSlide" :class="[isOpen ? 'overlay' : 'overlay-closed']"></a>
     <div class="sidebar-left" :class="[!isOpen ? 'closedSidebar' : 'openSidebar']">
-      <Navigation />
+      <Navigation :navItems="navItems" />
     </div>
   </div>
 </template>
@@ -15,6 +15,7 @@ import TogglerIcon from './TogglerIcon'
 export default {
   components: { TogglerIcon, Navigation },
   name: 'Sidebar',
+  props: ['navItems'],
   data() {
     return {
       isOpen: false,
@@ -53,7 +54,7 @@ export default {
     position: fixed;
     background-color: white;
     top: 40px;
-    z-index: 4;
+    z-index: 3;
   }
 
    .overlay {

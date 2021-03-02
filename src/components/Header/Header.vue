@@ -17,9 +17,9 @@
         <a href="#" class="sign-up-link mx-4 pl-5 align-self-center d-none d-md-block">Sign in/Sign up</a>
         <ShoppingCart class="cart ml-0 my-auto"/>
       </div>
-      <row-navigation />
+      <row-navigation :navItems="navItems" />
     </div>
-    <sidebar />
+    <sidebar :navItems="navItems" />
   </div>
 </template>
 
@@ -39,9 +39,7 @@ export default {
     BlogDropdown,
     },
   name: 'Header',
-  props: {
-    msg: String
-  },
+  props: ['msg', 'navItems'],
   data() {
     return {
       dropdownOpen: false

@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <Header msg="USPS is seeing delays; orders may be delayed"/>
+    <Header 
+      msg="USPS is seeing delays; orders may be delayed"
+      :navItems="navItems"
+      />
     <Banner />
     <Main />
     <MainJoinMightyFix />
@@ -26,6 +29,118 @@ export default {
     MainJoinMightyFix,
     MainOurPledge,
     Footer,
+  },
+  data() {
+      return {
+        menuOpen: false,
+        navItems: [
+          { 
+            heading: 'Already a member? Log-in',
+            submenu: false,
+            freeShipping: false,
+            menuOpen: false,
+            displayContent: false,
+          },
+          { 
+            heading: 'Subscribe',
+            submenu: true,
+            menuOpen: false,
+            displayContent: false,
+            content: 'Subscribe dropdown'
+          },
+          { 
+            heading: 'Essentials',
+            submenu: false,
+            menuOpen: false,
+            displayContent: false,
+          },
+          { 
+            heading: 'New',
+            submenu: false,
+            menuOpen: false,
+            displayContent: false,
+          },
+          { 
+            heading: 'Gifts',
+            submenu: true,
+            menuOpen: false,
+            displayContent: false,
+            content: 'Gifts Dropdown'           
+          },
+          { 
+            heading: 'Kitchen',
+            submenu: true,
+            menuOpen: false,
+            displayContent: false,
+
+          },
+          { 
+            heading: 'On the go',
+            submenu: true,
+            menuOpen: false,
+            displayContent: false,
+
+          },
+          { 
+            heading: 'Cleaning',
+            submenu: true,
+            menuOpen: false,
+            displayContent: false,
+
+          },
+          { 
+            heading: 'Body',
+            submenu: true,
+            menuOpen: false,
+            displayContent: false,
+
+          },
+          { 
+            heading: 'Wellness',
+            submenu: true,
+            menuOpen: false,
+            displayContent: false,
+
+          },
+          { 
+            heading: 'Kids',
+            submenu: true,
+            menuOpen: false,
+            displayContent: false,
+          },
+          { 
+            heading: 'Pets',
+            submenu: true,
+            menuOpen: false,
+            displayContent: false,
+          },
+          { 
+            heading: 'Sale',
+            submenu: true,
+            menuOpen: false,
+            displayContent: false,
+          },
+          { 
+            heading: 'Free Shipping over $50',
+            freeShipping: true,
+            submenu: false,
+            menuOpen: false,
+            displayContent: false,
+          },
+          { 
+            heading: 'MIGHTYLIFE BLOG',
+            submenu: false,
+            menuOpen: false,
+            displayContent: false,
+          },
+          { 
+            heading: 'LOG-IN',
+            submenu: false,
+            menuOpen: false,
+            displayContent: false,
+          },
+        ]
+      }
   },
 
 }

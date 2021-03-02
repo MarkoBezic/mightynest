@@ -123,7 +123,7 @@ export default {
     opacity: .7;
     position: absolute;
     transform: translate(-2400px, -52px);
-    z-index: 2;
+    z-index: 3;
   }
 
   .overlay-closed {
