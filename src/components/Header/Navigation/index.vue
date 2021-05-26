@@ -78,8 +78,9 @@ export default {
   },
   methods: {
     toggleMenu(id) {
-      this.navItems[id].menuOpen = !this.navItems[id].menuOpen;
-      this.navItems[id].displayContent = !this.navItems[id].displayContent;
+      let navItem = this.navItems[id]
+      navItem.menuOpen = !navItem.menuOpen;
+      navItem.displayContent = !navItem.displayContent;
     }
   },
 }
